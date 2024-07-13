@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "bank_transfer_layers.infrastructure.django_orm",
+    "bank_transfer_layers.interface",
 ]
 
 MIDDLEWARE = [
