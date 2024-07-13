@@ -9,6 +9,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
-            instruction_parser.parse(options['instruction'])
+            instruction = instruction_parser.parse(options['instruction'])
+            instruction()
         except ValueError as e:
             self.stdout.write(self.style.ERROR(str(e)))

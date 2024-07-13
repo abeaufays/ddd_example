@@ -10,7 +10,8 @@ class TestInstructionParser:
 
     def test_transfer_fund(self, mocker):
         patched_transfer_fund = mocker.patch("bank_transfer_layers.application.use_case.transfer_fund")
-        instruction_parser.parse("A B 100")
+        instruction = instruction_parser.parse("A B 100")
+        instruction()
         patched_transfer_fund.assert_called_once_with("A", "B", 100)
     
     def test_invalid_instruction(self):
