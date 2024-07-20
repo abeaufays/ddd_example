@@ -1,0 +1,11 @@
+[importlinter]
+root_package = bank_transfer_layers
+
+[importlinter:contract:bank_transfer_layers_contract]
+name="Enforce bank transfer app layers"
+type=layers
+layers= 
+    bank_transfer_layers.interface
+    bank_transfer_layers.application
+    bank_transfer_layers.infrastructure
+    bank_transfer_layers.domain 
